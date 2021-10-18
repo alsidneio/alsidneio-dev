@@ -1,3 +1,0 @@
-```release-note:test 
-tested the changelog file use my own directory to see if there is a chang available
-```
