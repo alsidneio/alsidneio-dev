@@ -1,0 +1,3 @@
+``` release-note: setup
+this is the first run at the changelog script
+```
