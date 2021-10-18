@@ -8,10 +8,10 @@ __parent="$(dirname "$__dir")"
 
 CHANGELOG_FILE_NAME="CHANGELOG.md"
 CHANGELOG_TMP_FILE_NAME="CHANGELOG.tmp"
-TARGET_SHA=0b8602f74366f87e25c042575295d17cdb434808 #$(git rev-parse HEAD)
-PREVIOUS_RELEASE_TAG=v1.4.0 #$(git describe --abbrev=0 --match='v*.*.*' --tags)
+TARGET_SHA=$(git rev-parse HEAD)
+PREVIOUS_RELEASE_TAG=$(git describe --abbrev=0 --match='v*.*.*' --tags)
 #PREVIOUS_RELEASE_SHA=$(git rev-list -n 1 $PREVIOUS_RELEASE_TAG)
-PREVIOUS_RELEASE_SHA=2686927920df0d351a59d84eae0013d77b462f2d #$(git rev-list -n 1 $PREVIOUS_RELEASE_TAG)
+PREVIOUS_RELEASE_SHA=$(git rev-list -n 1 $PREVIOUS_RELEASE_TAG)
 
 if [ $TARGET_SHA == $PREVIOUS_RELEASE_SHA ]; then
   echo "Nothing to do"
