@@ -16,7 +16,7 @@ func main() {
 	fmt.Print("hello world")
 
 	changeBuild("ec7398e84d813bb97b2e0ef227b5e12eb042d103", "f575a9e95b4b5c40b1a6dd8a2fef5d16f13d4ef9", "/home/abell/workspace/alsidneio-dev", ".changelog", "/home/abell/workspace/alsidneio-dev/scripts/changelog.tmpl", "/home/abell/workspace/alsidneio-dev/scripts/release-note.tmpl")
-	fmt.Printf("hola Mundo!")
+	fmt.Printf("bonjour tout le monde")
 
 }
 
