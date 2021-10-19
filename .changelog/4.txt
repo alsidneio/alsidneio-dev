@@ -1,3 +1,23 @@
 ```release-note:new-resource
 Deprecated the `bar` interface, please use the `foo` interface instead.
 ```
+```release-note:bug
+this thing was causing an error and now we have fixed it. 
+```
+```release-note:new-data-source
+new way to connect 
+```
+```release-note:new-guide
+check out this guide on how to do this new thing
+```
+```release-note:enhancement
+Enable state monitoring for connector and resource resources.
+Resource creation will error after 10 minutes timeout if the desired
+state has not been reached.
+```
+```release-note:improvement
+Make attribute `pipeline_id` on `meroxa_resource_connector` required.
+```
+```release-note:tests
+added these test to ensure functionality
+```

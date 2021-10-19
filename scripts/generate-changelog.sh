@@ -25,7 +25,7 @@ if [ $TARGET_SHA == $PREVIOUS_RELEASE_SHA ]; then
   exit 0
 fi
 
-PREVIOUS_CHANGELOG=$(sed -n -e "/# ${PREVIOUS_RELEASE_TAG#v}/,\$p" $__parent/$CHANGELOG_FILE_NAME)
+PREVIOUS_CHANGELOG=$(sed -e "/# ${PREVIOUS_RELEASE_TAG#v}/,\$p" $__parent/$CHANGELOG_FILE_NAME)
 
 if [ -z "$PREVIOUS_CHANGELOG" ]
 then
