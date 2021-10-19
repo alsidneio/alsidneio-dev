@@ -2,7 +2,6 @@
 
 FEATURES:
 
-* **New Resource:** `meroxa_connector`
-* **New Resource:** `meroxa_endpoint`
-* **New Resource:** `meroxa_pipeline`
-* **New Resource:** `meroxa_resource`
+* **New Resource:** `Deprecated the `foo` interface, please use the `bar` interface instead.` ([#3](https://github.com/meroxa/terraform-provider-meroxa/issues/3))
+
+

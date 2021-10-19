@@ -14,7 +14,7 @@ CHANGELOG_FILE_NAME="CHANGELOG.md"
 CHANGELOG_TMP_FILE_NAME="CHANGELOG.tmp"
 TARGET_SHA=$(git rev-parse HEAD)
 echo "Target_SHA=${TARGET_SHA}"
-PREVIOUS_RELEASE_TAG=$(git describe --abbrev=0 --match='v*.*.*' --tags)
+PREVIOUS_RELEASE_TAG=$(git tag --sort=creatordate | sort -r | sed -n '2 p') 
 echo "Previous_Release_Tag=${PREVIOUS_RELEASE_TAG}"
 #PREVIOUS_RELEASE_SHA=$(git rev-list -n 1 $PREVIOUS_RELEASE_TAG)
 PREVIOUS_RELEASE_SHA=$(git rev-list -n 1 $PREVIOUS_RELEASE_TAG)
