@@ -15,8 +15,8 @@ import (
 func main() {
 	fmt.Print("hello world")
 
-	changeBuild("4dd56b75de546836440a58bc4bf544e86b15859d", "487766ea032d2720d66696fc6d1e88e19194cc46", "/home/abell/workspace/alsidneio-dev", ".changelog", "/home/abell/workspace/alsidneio-dev/scripts/changelog.tmpl", "/home/abell/workspace/alsidneio-dev/scripts/release-note.tmpl")
-	fmt.Printf("hello world")
+	changeBuild("ec7398e84d813bb97b2e0ef227b5e12eb042d103", "f575a9e95b4b5c40b1a6dd8a2fef5d16f13d4ef9", "/home/abell/workspace/alsidneio-dev", ".changelog", "/home/abell/workspace/alsidneio-dev/scripts/changelog.tmpl", "/home/abell/workspace/alsidneio-dev/scripts/release-note.tmpl")
+	fmt.Printf("hola Mundo!")
 
 }
 
