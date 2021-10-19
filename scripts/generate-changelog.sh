@@ -4,7 +4,11 @@ set -o errexit
 set -o nounset
 
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+echo "dir is ${__dir}"
+
 __parent="$(dirname "$__dir")"
+echo "git directory is ${__parent}"
+
 
 CHANGELOG_FILE_NAME="CHANGELOG.md"
 CHANGELOG_TMP_FILE_NAME="CHANGELOG.tmp"
@@ -29,6 +33,7 @@ then
     exit 1
 fi
 echo "here"
+
 CHANGELOG=$($(go env GOPATH)/bin/changelog-build -this-release $TARGET_SHA \
                       -last-release "$PREVIOUS_RELEASE_SHA" \
                       -git-dir $__parent \

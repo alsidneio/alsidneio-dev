@@ -1,3 +1,3 @@
-``` release-note: setup
-this is the first run at the changelog script
+```release-note:new-resource
+Deprecated the `foo` interface, please use the `bar` interface instead.
 ```
