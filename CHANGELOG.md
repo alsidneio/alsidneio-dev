@@ -1,3 +1,9 @@
+## v1.1.0
+
+ENHANCEMENTS:
+
+* updated the changelog yaml so that tag will push changelog commit to the main branch ([#7](https://github.com/meroxa/terraform-provider-meroxa/issues/7))
+
 ## v1.0.6
 
 FEATURES:
