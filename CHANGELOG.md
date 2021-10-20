@@ -5,8 +5,6 @@ FEATURES:
 * **New Data Source:** `new way to connect` ([#4](https://github.com/meroxa/terraform-provider-meroxa/issues/4))
 * **New Guide:** `check out this guide on how to do this new thing` ([#4](https://github.com/meroxa/terraform-provider-meroxa/issues/4))
 * **New Resource:** `Deprecated the `bar` interface, please use the `foo` interface instead.` ([#4](https://github.com/meroxa/terraform-provider-meroxa/issues/4))
-* **New Resource:** `Deprecated the `foo` interface, please use the `bar` interface instead.` ([#2](https://github.com/meroxa/terraform-provider-meroxa/issues/2))
-* **New Resource:** `Deprecated the `foo` interface, please use the `bar` interface instead.` ([#3](https://github.com/meroxa/terraform-provider-meroxa/issues/3))
 
 ENHANCEMENTS:
 
