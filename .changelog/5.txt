@@ -1,0 +1,6 @@
+```release-note:enhancement
+hopefully I have updated the scripts ins usch a way that when I push the tags they will trigger a changelog ang the changelog will be succesful
+```
+```release-note:bug
+the vanilla generate log script is TRASH, so we modified it
+```
