@@ -1,4 +1,4 @@
-## 1.0.0
+## v1.0.4
 
 FEATURES:
 
@@ -18,11 +18,9 @@ BUG FIXES:
 
 * this thing was causing an error and now we have fixed it. ([#4](https://github.com/meroxa/terraform-provider-meroxa/issues/4))
 
-## 1.0.0
-## 1.0.0
+## v1.0.1
+## v1.0.0
 
-
-FEATURES:
 FEATURES:
 
 
