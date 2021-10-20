@@ -1,0 +1,6 @@
+```release-note:enhancement
+removed the thing causing porcelain to fail
+```
+```release-note:bug
+the vanilla generate log script is TRASH, so we modified it. The other companies may know something but they aint telling us
+```
