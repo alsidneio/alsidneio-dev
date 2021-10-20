@@ -14,7 +14,9 @@ CHANGELOG_FILE_NAME="CHANGELOG.md"
 CHANGELOG_TMP_FILE_NAME="CHANGELOG.tmp"
 TARGET_SHA=$(git rev-parse HEAD)
 echo "Target_SHA=${TARGET_SHA}"
-PREVIOUS_RELEASE_TAG=$(git tag --sort=creatordate | sort -r | sed -n '2 p') 
+PREVIOUS_RELEASE_TAG=$(git tag --sort=creatordate | sort -r | sed -n '2 p')
+#PREVIOUS_RELEASE_TAG=$(git describe --abbrev=0 --match='v*.*.*' --tags)
+
 echo "Previous_Release_Tag=${PREVIOUS_RELEASE_TAG}"
 #PREVIOUS_RELEASE_SHA=$(git rev-list -n 1 $PREVIOUS_RELEASE_TAG)
 PREVIOUS_RELEASE_SHA=$(git rev-list -n 1 $PREVIOUS_RELEASE_TAG)
@@ -25,7 +27,7 @@ if [ $TARGET_SHA == $PREVIOUS_RELEASE_SHA ]; then
   exit 0
 fi
 
-PREVIOUS_CHANGELOG=$(sed -n -e "/# ${PREVIOUS_RELEASE_TAG#v}/,\$p" $__parent/$CHANGELOG_FILE_NAME)
+PREVIOUS_CHANGELOG=$(sed -n -e "/# ${PREVIOUS_RELEASE_TAG}/,\$ p" $__parent/$CHANGELOG_FILE_NAME)
 
 if [ -z "$PREVIOUS_CHANGELOG" ]
 then
@@ -50,7 +52,11 @@ echo "$CHANGELOG"
 
 rm -f $CHANGELOG_TMP_FILE_NAME
 
-sed -n -e "1{/# /p;}" $__parent/$CHANGELOG_FILE_NAME > $CHANGELOG_TMP_FILE_NAME
+#Need to understand the reasoning behind the following line,
+#why do we need to capture  
+#sed -n -e "1{/# /p;}" $__parent/$CHANGELOG_FILE_NAME> $CHANGELOG_TMP_FILE_NAME
+
+echo "## $(git describe --abbrev=0 --tags)" > $CHANGELOG_TMP_FILE_NAME
 echo "$CHANGELOG" >> $CHANGELOG_TMP_FILE_NAME
 echo >> $CHANGELOG_TMP_FILE_NAME
 echo "$PREVIOUS_CHANGELOG" >> $CHANGELOG_TMP_FILE_NAME
